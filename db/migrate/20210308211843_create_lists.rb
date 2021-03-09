@@ -3,7 +3,7 @@ class CreateLists < ActiveRecord::Migration[6.1]
     create_table :lists do |t|
       t.string :description
       t.string :image
-      t.datetime :date
+    
 
       t.timestamps
     end
