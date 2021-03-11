@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :items
-  resources :lists
+  # resources :items
+  # resources :lists
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/lists", to: "lists#index"
   post "/lists", to: "lists#create"
