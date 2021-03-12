@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
     def item_params
         # params.require(:list).permit(:description, :image, :date )
-        params.permit(:description, :image, :date )
+        params.permit(:description, :priority, :list_id, :complete )
     end
 
 end
