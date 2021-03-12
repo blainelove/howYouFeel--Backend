@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 
 
     def create
-        @item = Item.create(list_params)
+        @item = Item.create(item_params)
         render json: @item
     end
 
@@ -28,6 +28,13 @@ class ItemsController < ApplicationController
         @item = Item.find(params[:id])
         @item.destroy
         render json: @item
+    end
+
+    private
+
+    def item_params
+        # params.require(:list).permit(:description, :image, :date )
+        params.permit(:description, :image, :date )
     end
 
 end
